@@ -20,6 +20,7 @@
   "description": "",
   "devDependencies": {
     "jest": "^29.7.0",
+    "newman": "^6.2.1",
     "nodemon": "^3.1.9"
   },
   "dependencies": {
