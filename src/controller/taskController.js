@@ -1,4 +1,4 @@
-const Task = require('./taskModel');
+const Task = require('../models/taskModel.js');
 
 // Criar uma nova tarefa
 exports.createTask = async (req, res) => {
@@ -21,7 +21,6 @@ exports.getTasks = async (req, res) => {
 };
 
 // Atualizar uma tarefa
-// Atualizar uma tarefa
 exports.updateTask = async (req, res) => {
   try {
     const task = await Task.findByIdAndUpdate(req.params.id, req.body, { new: true });
@@ -35,7 +34,7 @@ exports.updateTask = async (req, res) => {
 exports.deleteTask = async (req, res) => {
   try {
     await Task.findByIdAndDelete(req.params.id);
-    res.json({ message: 'Tarefa removida com sucesso!' });
+    res.json({ message: 'Task removed successfully!' });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
