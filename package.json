@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "nodemon src/server.js"
   },
   "repository": {
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/daspiccolo/Task-Manager-API---CRUD-Test-Automation-DevOps#readme",
   "description": "",
   "devDependencies": {
+    "jest": "^29.7.0",
     "nodemon": "^3.1.9"
   },
   "dependencies": {
