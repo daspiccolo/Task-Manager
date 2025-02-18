@@ -1,6 +1,6 @@
 const Task = require('../models/taskModel.js');
 
-// Criar uma nova tarefa
+// Create a new task
 exports.createTask = async (req, res) => {
   try {
     const task = await Task.create(req.body);
@@ -10,7 +10,7 @@ exports.createTask = async (req, res) => {
   }
 };
 
-// Listar todas as tarefas
+// Get all tasks
 exports.getTasks = async (req, res) => {
   try {
     const tasks = await Task.find();
@@ -20,7 +20,7 @@ exports.getTasks = async (req, res) => {
   }
 };
 
-// Atualizar uma tarefa
+// Update a task
 exports.updateTask = async (req, res) => {
   try {
     const task = await Task.findByIdAndUpdate(req.params.id, req.body, { new: true });
@@ -30,7 +30,7 @@ exports.updateTask = async (req, res) => {
   }
 };
 
-// Deletar uma tarefa
+// Delete a task
 exports.deleteTask = async (req, res) => {
   try {
     await Task.findByIdAndDelete(req.params.id);
