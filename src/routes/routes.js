@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const taskController = require('./taskController');
+const taskController = require('../controller/taskController.js');
 
 // Definir rotas CRUD
 router.post('/tasks', taskController.createTask);
